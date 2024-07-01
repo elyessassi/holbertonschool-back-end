@@ -16,7 +16,7 @@ def todo():
             username = i.get("name")
             break
 
-    with open(f"{id_value}.csv", "w", newline="") as fd:
+    with open(f"{id_value}.csv", "w") as fd:
         writer = csv.writer(fd, quoting=csv.QUOTE_ALL)
         for i in responsetodo.json():
             if id_value == i.get("userId"):
