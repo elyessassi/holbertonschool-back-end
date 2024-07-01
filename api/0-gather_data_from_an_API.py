@@ -3,7 +3,7 @@ import requests
 import sys
 
 
-def todo():
+def todo(int(sys.argv[1])):
     """fonction that shows user name and tasks done"""
     id_value = int(sys.argv[1])
     responsetodo = requests.get("https://jsonplaceholder.typicode.com/todos")
