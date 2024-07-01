@@ -17,14 +17,11 @@ def todo():
             break
 
     with open(f"{id_value}.csv", "w", newline="") as fd:
-        fieldnames = ["USER_ID", "USERNAME",
-                      "TASK_COMPLETED_STATUS", "TASK_TITLE"]
-        writer = csv.DictWriter(fd, fieldnames=fieldnames)
+        writer = csv.writer(fd)
         for i in responsetodo.json():
             if id_value == i.get("userId"):
-                writer.writerow({'USER_ID': id_value, "USERNAME": username,
-                                "TASK_COMPLETED_STATUS": i.get("completed"),
-                                 "TASK_TITLE": i.get("title")})
+                writer.writerow([id_value, username,
+                                i.get("completed"), i.get("title")])
 
 
 if __name__ == "__main__":
