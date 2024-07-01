@@ -5,9 +5,9 @@ import requests
 import sys
 
 
-def todo():
+def todo(id):
     """module that exports user information to CSV"""
-    id_value = int(sys.argv[1])
+    id_value = id
     responsetodo = requests.get("https://jsonplaceholder.typicode.com/todos")
     responseusers = requests.get("https://jsonplaceholder.typicode.com/users")
 
@@ -25,4 +25,5 @@ def todo():
 
 
 if __name__ == "__main__":
-    todo()
+    id = int(sys.argv[1])
+    todo(id)
