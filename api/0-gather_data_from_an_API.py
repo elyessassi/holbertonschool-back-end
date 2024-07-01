@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""fonction that shows user name and tasks done"""
 import requests
 import sys
 
