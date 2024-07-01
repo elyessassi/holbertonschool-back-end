@@ -2,8 +2,6 @@
 import requests
 import sys
 
-"""fonction that shows user name and tasks done"""
-
 
 def todo():
     """fonction that shows user name and tasks done"""
