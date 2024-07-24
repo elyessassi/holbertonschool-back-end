@@ -19,10 +19,12 @@ def todo():
 
     with open(f"{id_value}.csv", "w") as fd:
         writer = csv.writer(fd, quoting=csv.QUOTE_ALL)
-        for i in responsetodo.json():
-            if id_value == i.get("userId"):
-                writer.writerow([id_value, username,
-                                i.get("completed"), i.get("title")])
+        for todo_item in responsetodo.json():
+            if id_value == todo_item.get("userId"):
+                writer.writerow([id_value,
+                                 username,
+                                 todo_item.get("completed"),
+                                 todo_item.get("title")])
 
 
 if __name__ == "__main__":
